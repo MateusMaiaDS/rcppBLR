@@ -139,7 +139,7 @@ BEGIN_RCPP
 END_RCPP
 }
 // y_post
-NumericVector y_post(NumericVector x_new, NumericVector beta_post, NumericVector tau_post);
+RcppExport NumericVector y_post(NumericVector x_new, NumericVector beta_post, NumericVector tau_post);
 RcppExport SEXP _rcppBLR_y_post(SEXP x_newSEXP, SEXP beta_postSEXP, SEXP tau_postSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;

@@ -217,7 +217,7 @@ List blm(NumericVector x, NumericVector y, int n_mcmc, int n_burn, int n_chain,
 
 
 // [[Rcpp::export]]
-NumericVector y_post(NumericVector x_new,
+RcppExport NumericVector y_post(NumericVector x_new,
                      NumericVector beta_post,
                      NumericVector tau_post){
 

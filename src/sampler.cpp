@@ -3,7 +3,6 @@
 using namespace Rcpp;
 using namespace std;
 
-// [[Rcpp::export]]
 double sample_post_beta(NumericVector x, NumericVector y, double tau, double tau_beta) {
 
   // Storing the variables
@@ -21,7 +20,6 @@ double sample_post_beta(NumericVector x, NumericVector y, double tau, double tau
 }
 
 
-// [[Rcpp::export]]
 double sample_post_tau(NumericVector x, NumericVector y, double beta, double a_tau, double d_tau) {
 
   // Storing the variables
@@ -38,7 +36,6 @@ double sample_post_tau(NumericVector x, NumericVector y, double beta, double a_t
 }
 
 // Returning an array instead
-// [[Rcpp::export]]
 double sample_post_beta_arr(NumericVector x, NumericVector y, int n,
                             double tau, double tau_beta) {
 
@@ -56,7 +53,6 @@ double sample_post_beta_arr(NumericVector x, NumericVector y, int n,
 }
 
 
-// [[Rcpp::export]]
 double sample_post_tau_arr(NumericVector x, NumericVector y, int n,
                            double beta, double a_tau, double d_tau) {
 
@@ -74,7 +70,6 @@ double sample_post_tau_arr(NumericVector x, NumericVector y, int n,
 
 
 
-// [[Rcpp::export]]
 List gibbs_sampler_chain(NumericVector x,
                          NumericVector y,
                          int n_mcmc,
@@ -121,7 +116,6 @@ List gibbs_sampler_chain(NumericVector x,
 
 }
 
-// [[Rcpp::export]]
 NumericVector gamma_sampler(int n, double shape, double rate){
 
   NumericVector gamma_vec;
@@ -131,7 +125,6 @@ NumericVector gamma_sampler(int n, double shape, double rate){
   return gamma_vec;
 }
 
-// [[Rcpp::export]]
 List gibbs_sampler(NumericVector x,NumericVector y,
                    int n_mcmc,int n_burn,double init_beta,
                    double init_tau,double tau_beta, double a_tau,double d_tau) {
@@ -217,7 +210,7 @@ List blm(NumericVector x, NumericVector y, int n_mcmc, int n_burn, int n_chain,
 
 
 // [[Rcpp::export]]
-RcppExport NumericVector y_post(NumericVector x_new,
+NumericVector y_post(NumericVector x_new,
                      NumericVector beta_post,
                      NumericVector tau_post){
 

@@ -1,7 +1,13 @@
-## BLM
 #' @useDynLib rcppBLR
 #' @importFrom Rcpp sourceCpp
 
+## BLM
+#' @method predict "blm"
+#' @rdname blm The posterior sampled models
+#' @param object The posterior sampled paramters
+#' @param x_new The new observations to sample new y
+#' \method{predict}{blm}{object,
+#' x_test}
 #' @export
 #'
 # # Getting the values

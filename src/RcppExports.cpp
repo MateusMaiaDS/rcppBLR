@@ -11,7 +11,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // blm
-RcppExport List blm(NumericVector x, NumericVector y, int n_mcmc, int n_burn, int n_chain, double tau_beta, double a_tau, double d_tau);
+List blm(NumericVector x, NumericVector y, int n_mcmc, int n_burn, int n_chain, double tau_beta, double a_tau, double d_tau);
 RcppExport SEXP _rcppBLR_blm(SEXP xSEXP, SEXP ySEXP, SEXP n_mcmcSEXP, SEXP n_burnSEXP, SEXP n_chainSEXP, SEXP tau_betaSEXP, SEXP a_tauSEXP, SEXP d_tauSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;

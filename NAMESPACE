@@ -1,4 +1,5 @@
 useDynLib(rcppBLR)
 S3method(predict,"blm")
 exportPattern("ˆ[[:alpha:]]+")
+export(blm)
 importFrom(Rcpp, evalCpp)
